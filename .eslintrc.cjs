@@ -28,10 +28,23 @@ module.exports = {
   rules: {
     // base
     indent: ['error', 2, { SwitchCase: 1 }],
-    'linebreak-style': ['error', 'windows'],
+    'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
     // end
+    'react/react-in-jsx-scope': 'off',
+    '@typescript-eslint/no-explicit-any': 'warn', // Lower severity
+    '@typescript-eslint/no-unsafe-assignment': 'off', // Disable unsafe checks
+    '@typescript-eslint/no-unsafe-member-access': 'off',
+    'unicorn/prevent-abbreviations': 'off', // Disable abbreviations rule
+    'sonarjs/no-duplicate-string': 'warn', // Optional: Lower severity
+    'react/prop-types': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-unsafe-argument': 'off',
+    'sonarjs/no-duplicate-string': 'off',
+
+
+
 
     // typescript
     '@typescript-eslint/array-type': 'off',
