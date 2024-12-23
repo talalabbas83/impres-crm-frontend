@@ -1,6 +1,8 @@
 import type { IMPression } from '@/types/dashboard';
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Eye } from 'lucide-react';
+
+import { Card, CardContent } from '@/components/ui/card';
 
 interface IMPressionsCardProps {
   data: IMPression;
@@ -9,9 +11,10 @@ interface IMPressionsCardProps {
 export function IMPressionsCard({ data }: IMPressionsCardProps) {
   return (
     <Card>
-      <CardHeader>
-        <CardTitle className='text-lg'>IMPressions</CardTitle>
-      </CardHeader>
+      <div className='flex items-center gap-2 p-3 text-white'>
+        <Eye className='h-4 w-4' />
+        <span className='text-sm font-medium'>IMPressions</span>
+      </div>
       <CardContent>
         <div className='text-center'>
           <div className='mb-4 text-5xl font-bold'>{data.total}</div>

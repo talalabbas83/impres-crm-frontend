@@ -20,7 +20,7 @@ const navItems = [
     id: 'dashboard',
     label: 'Dashboard',
     icon: LayoutDashboard,
-    color: 'rgb(180, 83, 25)', // warm brown
+    color: '#D97362',
     isHeader: true
   },
   {
@@ -28,15 +28,15 @@ const navItems = [
     label: 'Leads & Deals',
     count: 12,
     icon: CircleDollarSign,
-    color: 'rgb(186, 94, 34)'
+    color: '#D97362'
   },
-  { id: 'customers', label: 'Customers', count: 45, icon: Users, color: 'rgb(186, 94, 34)' },
-  { id: 'companies', label: 'Companies', count: 28, icon: Building2, color: 'rgb(186, 94, 34)' },
-  { id: 'campaigns', label: 'Campaigns', count: 3, icon: Mail, color: 'rgb(186, 94, 34)' },
-  { id: 'calendar', label: 'Calendar', count: 5, icon: Calendar, color: 'rgb(186, 94, 34)' },
-  { id: 'documents', label: 'Documents', count: 17, icon: FileText, color: 'rgb(186, 94, 34)' },
-  { id: 'analytics', label: 'Analytics', icon: BarChart3, color: 'rgb(186, 94, 34)' },
-  { id: 'settings', label: 'Settings', icon: Settings, color: 'rgb(186, 94, 34)' }
+  { id: 'customers', label: 'Customers', count: 45, icon: Users, color: '#D97362' },
+  { id: 'companies', label: 'Companies', count: 28, icon: Building2, color: '#D97362' },
+  { id: 'campaigns', label: 'Campaigns', count: 3, icon: Mail, color: '#D97362' },
+  { id: 'calendar', label: 'Calendar', count: 5, icon: Calendar, color: '#D97362' },
+  { id: 'documents', label: 'Documents', count: 17, icon: FileText, color: '#D97362' },
+  { id: 'analytics', label: 'Analytics', icon: BarChart3, color: '#D97362' },
+  { id: 'settings', label: 'Settings', icon: Settings, color: '#D97362' }
 ];
 
 export function Sidebar() {

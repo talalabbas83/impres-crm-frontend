@@ -2,6 +2,7 @@ import { DayPlanner } from './day-planner/planner';
 import { CurrentInventory } from './inventory/current-inventory';
 import { Sidebar } from './layout/sidebar';
 import { ContactsMap } from './map/contacts-map';
+import { MonthlyCalls } from './panels/monthly-calls';
 import { IMPressionsCard } from './stats/impressions';
 
 const mockData = {
@@ -32,14 +33,17 @@ export function Dashboard() {
       <div className='flex-1 overflow-auto'>
         <div className='flex h-full flex-col gap-4 p-4'>
           <div className='grid grid-cols-1 gap-4 md:grid-cols-3'>
-            <div className='col-span-2 h-full'>
+            <div className='h-full'>
               <DayPlanner />
             </div>
             <div>
               <IMPressionsCard data={mockData.impressions} />
             </div>
+            <div>
+              <MonthlyCalls />
+            </div>
           </div>
-          <div className='grid flex-1 grid-cols-1 gap-4 md:grid-cols-3'>
+          <div className='grid grid-cols-1 gap-4 md:grid-cols-3'>
             <div className='col-span-2'>
               <ContactsMap
                 contacts={mockData.contacts}

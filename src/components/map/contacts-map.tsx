@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 
 import L from 'leaflet';
+import { MapPin } from 'lucide-react';
 import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet';
 
 import 'leaflet/dist/leaflet.css';
@@ -10,7 +11,7 @@ import 'leaflet.markercluster';
 
 import type { Contact } from '@/types/dashboard';
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 
 // Custom marker icons for different call statuses
 const markerIcons = {
@@ -119,9 +120,10 @@ export function ContactsMap({ contacts, currentLocation }: ContactsMapProps) {
 
   return (
     <Card className='h-full'>
-      <CardHeader>
-        <CardTitle className='text-lg'>Contacts</CardTitle>
-      </CardHeader>
+      <div className='flex items-center gap-2 p-3 text-white'>
+        <MapPin className='h-4 w-4' />
+        <span className='text-sm font-medium'>Contacts</span>
+      </div>
       <CardContent>
         <div className='h-[400px] w-full overflow-hidden rounded-md'>
           <MapContainer center={center} zoom={12} style={{ height: '100%', width: '100%' }}>

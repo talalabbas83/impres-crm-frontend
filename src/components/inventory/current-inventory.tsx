@@ -1,6 +1,8 @@
 import type { InventoryItem } from '@/types/dashboard';
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Package } from 'lucide-react';
+
+import { Card, CardContent } from '@/components/ui/card';
 import {
   Table,
   TableBody,
@@ -17,9 +19,10 @@ interface CurrentInventoryProps {
 export function CurrentInventory({ items }: CurrentInventoryProps) {
   return (
     <Card>
-      <CardHeader>
-        <CardTitle>Current Inventory</CardTitle>
-      </CardHeader>
+      <div className='flex items-center gap-2 p-3 text-white'>
+        <Package className='h-4 w-4' />
+        <span className='text-sm font-medium'>Current Inventory</span>
+      </div>
       <CardContent>
         <Table>
           <TableHeader>

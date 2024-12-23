@@ -2,7 +2,9 @@
 
 import { useState } from 'react';
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Calendar } from 'lucide-react';
+
+import { Card, CardContent } from '@/components/ui/card';
 
 export function DayPlanner() {
   const [events] = useState<any[]>([]);
@@ -10,9 +12,10 @@ export function DayPlanner() {
 
   return (
     <Card className='flex h-full flex-col'>
-      <CardHeader>
-        <CardTitle className='flex items-center gap-2 text-lg font-medium'>Day Planner</CardTitle>
-      </CardHeader>
+      <div className='flex items-center gap-2 p-3 text-white'>
+        <Calendar className='h-4 w-4' />
+        <span className='text-sm font-medium'>Day Planner</span>
+      </div>
       <CardContent className='flex-1 overflow-auto'>
         {events.length === 0 ? (
           <div className='py-8 text-center text-muted-foreground'>
