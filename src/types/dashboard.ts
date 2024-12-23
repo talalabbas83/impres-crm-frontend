@@ -22,6 +22,7 @@ export interface Contact {
   id: number;
   lat: number;
   lng: number;
+  callStatus: string;
 }
 
 export interface IMPression {

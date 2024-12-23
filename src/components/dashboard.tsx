@@ -10,8 +10,11 @@ const mockData = {
     virtual: 45,
     live: 92
   },
+  currentLocation: { lat: 49.8847, lng: -97.1385, name: 'Current Location' },
   contacts: [
-    { id: 1, lat: 49.8951, lng: -97.1384 } // Winnipeg coordinates
+    { id: 1, lat: 49.8951, lng: -97.1384, callStatus: 'green' }, // Winnipeg coordinates
+    { id: 2, lat: 49.8839, lng: -97.1567, callStatus: 'orange' }, // Nearby coordinates
+    { id: 3, lat: 49.9063, lng: -97.1199, callStatus: 'red' } // Nearby coordinates
     // Add more contact coordinates as needed
   ],
   inventory: [
@@ -35,7 +38,7 @@ export function Dashboard() {
             <IMPressionsCard data={mockData.impressions} />
           </div>
           <div className='lg:col-span-2'>
-            <ContactsMap contacts={mockData.contacts} />
+            <ContactsMap contacts={mockData.contacts} currentLocation={mockData.currentLocation} />
           </div>
           <div>
             <CurrentInventory items={mockData.inventory} />
