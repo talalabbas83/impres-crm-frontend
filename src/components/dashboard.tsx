@@ -27,21 +27,28 @@ const mockData = {
 
 export function Dashboard() {
   return (
-    <div className='flex h-screen bg-background'>
+    <div className='flex h-screen bg-background' style={{ height: 'calc(100vh - 100px)' }}>
       <Sidebar />
       <div className='flex-1 overflow-auto'>
-        <div className='grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-3'>
-          <div className='lg:col-span-2'>
-            <DayPlanner />
+        <div className='flex h-full flex-col gap-4 p-4'>
+          <div className='grid grid-cols-1 gap-4 md:grid-cols-3'>
+            <div className='col-span-2 h-full'>
+              <DayPlanner />
+            </div>
+            <div>
+              <IMPressionsCard data={mockData.impressions} />
+            </div>
           </div>
-          <div>
-            <IMPressionsCard data={mockData.impressions} />
-          </div>
-          <div className='lg:col-span-2'>
-            <ContactsMap contacts={mockData.contacts} currentLocation={mockData.currentLocation} />
-          </div>
-          <div>
-            <CurrentInventory items={mockData.inventory} />
+          <div className='grid flex-1 grid-cols-1 gap-4 md:grid-cols-3'>
+            <div className='col-span-2'>
+              <ContactsMap
+                contacts={mockData.contacts}
+                currentLocation={mockData.currentLocation}
+              />
+            </div>
+            <div>
+              <CurrentInventory items={mockData.inventory} />
+            </div>
           </div>
         </div>
       </div>

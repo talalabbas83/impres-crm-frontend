@@ -120,7 +120,7 @@ export function ContactsMap({ contacts, currentLocation }: ContactsMapProps) {
   return (
     <Card className='h-full'>
       <CardHeader>
-        <CardTitle className='text-lg'>Map: Contacts</CardTitle>
+        <CardTitle className='text-lg'>Contacts</CardTitle>
       </CardHeader>
       <CardContent>
         <div className='h-[400px] w-full overflow-hidden rounded-md'>

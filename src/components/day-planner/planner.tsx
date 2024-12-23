@@ -9,11 +9,11 @@ export function DayPlanner() {
   const hours = Array.from({ length: 24 }, (_, i) => i);
 
   return (
-    <Card>
+    <Card className='flex h-full flex-col'>
       <CardHeader>
         <CardTitle className='flex items-center gap-2 text-lg font-medium'>Day Planner</CardTitle>
       </CardHeader>
-      <CardContent>
+      <CardContent className='flex-1 overflow-auto'>
         {events.length === 0 ? (
           <div className='py-8 text-center text-muted-foreground'>
             There are no events planned for today.
